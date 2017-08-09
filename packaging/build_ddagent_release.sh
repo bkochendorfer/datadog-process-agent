@@ -11,7 +11,7 @@ if [ -z ${AGENT_S3_BUCKET+x} ]; then
 fi
 
 if [ -z ${PROCESS_AGENT_VERSION+x} ]; then
-	git checkout master
+	git checkout staging
 	# Pick the latest tag by default for our version.
 	PROCESS_AGENT_VERSION=$(git tag | sort | head -1)
 	# But we will be building from the master branch in this case.
